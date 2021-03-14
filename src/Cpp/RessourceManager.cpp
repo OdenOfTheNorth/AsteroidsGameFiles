@@ -6,6 +6,7 @@ void RessourceManager::RessourceInit(SDL_Renderer* renderer)
 	AsteroidTexture = RenderingUtilities::LoadTexture(asteroidTexturePath, renderer);
 	RocketTexture = RenderingUtilities::LoadTexture(rocketTexturePath, renderer);
 	RollingStoneTexture = RenderingUtilities::LoadTexture(rollingStoneTexturePath, renderer);
+	SkyStoneTexture = RenderingUtilities::LoadTexture(skyTexturePath, renderer);
 }
 
 SDL_Texture * RessourceManager::GetText(std::string text, int fontSize, SDL_Color color, SDL_Renderer* renderer)

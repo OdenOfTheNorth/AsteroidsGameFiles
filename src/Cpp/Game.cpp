@@ -61,6 +61,7 @@ Game::Game(const char* title, int resX, int resY, bool fullscreen)
 		std::vector<GameObject::CollisionLayers>{ GameObject::asteroids, GameObject::rockets, GameObject::rollingStone  },
 		GameObject::player, collsionSystem, ressourceManager);
 	hazardController = new HazardController(1, player, Vector2(resX, resY), renderer, collsionSystem, ressourceManager);
+	skyBox = new SkyBox(ressourceManager, Vector2(resX, resY));
 
 	collsionSystem->AddCollider(new GameObject(Vector2(-200, 0), 0));
 	collsionSystem->AddCollider(player);
@@ -91,6 +92,7 @@ void Game::Update()
 void Game::Render()
 {
 	SDL_RenderClear(renderer);
+	skyBox->Render(renderer);
 	hazardController->Render(renderer);
 	player->Render(renderer);
 	scoreSystem->DisplayScoreScreen(renderer);

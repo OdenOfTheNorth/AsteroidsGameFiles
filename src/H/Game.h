@@ -11,6 +11,7 @@ using namespace std;
 #include <SDL_TTF.h>
 #include "RessourceManager.h"
 #include "ScoreSystem.h"
+#include "SkyBox.h"
 
 class Game
 {
@@ -26,6 +27,7 @@ public:
 	Inputs* inputs;
 	Player* player;
 	HazardController* hazardController;
+	SkyBox* skyBox;
 
 	RessourceManager* ressourceManager;
 	ScoreSystem* scoreSystem;

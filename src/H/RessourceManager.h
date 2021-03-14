@@ -10,6 +10,7 @@ class RessourceManager
 		SDL_Texture* AsteroidTexture;
 		SDL_Texture* RocketTexture;
 		SDL_Texture* RollingStoneTexture;
+		SDL_Texture* SkyStoneTexture;
 
 		const std::string scoreFilePath = "Ressources/Score.txt";
 
@@ -24,6 +25,7 @@ class RessourceManager
 		const std::string rocketTexturePath = "Ressources/HomingRocket.png";
 		const std::string rollingStoneTexturePath = "Ressources/RollingStones.png";
 		const std::string playerTexturePath = "Ressources/PlayerRocket.png";
+		const std::string skyTexturePath = "Ressources/SkyTexture.png";
 
 		const std::string fontAPath = "Ressources/ArialCE.ttf";
 };
